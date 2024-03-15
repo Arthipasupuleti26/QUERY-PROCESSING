@@ -1,0 +1,9 @@
+import pandas as pd
+import numpy as np
+np.random.seed(0)
+data = np.random.randn(10, 4)
+df = pd.DataFrame(data, columns=['A', 'B', 'C', 'D'])
+
+styled_df = df.style.set_properties(**{'background-color': 'black', 'color': 'yellow'})
+
+styled_df
