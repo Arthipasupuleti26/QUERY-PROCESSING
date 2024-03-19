@@ -1,0 +1,15 @@
+import pandas as pd
+data = {'Name': ['John', 'Alice', 'Bob', 'David'],
+        'Age': [25, 30, 35, 40],
+        'City': ['New York', 'Los Angeles', 'Chicago', 'Houston']}
+df = pd.DataFrame(data)
+print("Original DataFrame:")
+print(df)
+column_to_swap = 'Name'
+if column_to_swap in df.columns:
+    # Swap the cases of the specified column
+    df[column_to_swap] = df[column_to_swap].str.swapcase()
+else:
+    print("Column '{}' not found in the DataFrame.".format(column_to_swap))
+print("\nDataFrame after swapping cases of column '{}':".format(column_to_swap))
+print(df)
